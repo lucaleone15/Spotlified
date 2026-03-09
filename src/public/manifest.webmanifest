@@ -3,7 +3,7 @@
   "name": "Spotlified - Unleash the JS",
   "icons": [
     {
-      "src": "../images/logo_spotlified.png",
+      "src": "/images/logo_spotlified.png",
       "type": "image/png",
       "sizes": "512x512"
     }
