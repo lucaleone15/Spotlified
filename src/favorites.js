@@ -16,10 +16,14 @@ const getFavorites = () => {
     const favoritesTab = [];
     for (let i = 0; i < favorites.length; i++) {
         const key = favorites.key(i);
-        const value = JSON.parse(favorites.getItem(key));
-        favoritesTab.push(value);
+        try {
+            const value = JSON.parse(favorites.getItem(key));
+            if (value && value.id) favoritesTab.push(value);
+        } catch (e) {
+        }
     }
     return favoritesTab;
 }
+
 
 export { addFavorite, removeFavorite, getFavorite, getFavorites }
